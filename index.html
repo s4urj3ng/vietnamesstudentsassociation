@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi hội SVVN tại Đại học Ajou | VSA Ajou</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- PHẦN CSS (TRANG TRÍ) --- */
+        
+        /* 1. Thiết lập chung */
+        :root {
+            --primary-color: #005eb8; /* Màu xanh Ajou */
+            --secondary-color: #f4f4f4;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* 2. Header (Thanh điều hướng) */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-area img {
+            height: 60px; /* Chiều cao logo */
+            margin-right: 15px;
+        }
+
+        .logo-area h1 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 3. Hero Section (Phần mở đầu) */
+        .hero {
+            /* Ảnh nền trường Ajou (Dùng link ảnh mạng tạm thời) */
+            background: linear-gradient(rgba(0, 94, 184, 0.7), rgba(0, 94, 184, 0.5)), url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Ajou_University_campus.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh; /* Chiếm 80% chiều cao màn hình */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 60px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #e2e2e2;
+        }
+
+        /* 4. Giới thiệu & Thông tin trường */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* 5. Footer */
+        footer {
+            background: #333;
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-area">
+                    <img src="logo.jpg" alt="Logo VSA Ajou"> 
+                    <h1>VSA Ajou University</h1>
+                </div>
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#activities">Hoạt động</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Kết Nối - Chia Sẻ - Phát Triển</h2>
+        <p>Ngôi nhà chung của cộng đồng du học sinh Việt Nam tại Đại học Ajou, Hàn Quốc.</p>
+        <a href="#contact" class="btn">Tham gia ngay</a>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Về Đại Học Ajou</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>📍 Vị trí</h3>
+                    <p>Tọa lạc tại thành phố Suwon, tỉnh Gyeonggi, cách Seoul khoảng 30km. Là trung tâm của sự đổi mới và công nghệ.</p>
+                </div>
+                <div class="card">
+                    <h3>🎓 Lịch sử</h3>
+                    <p>Thành lập năm 1973. Ajou là một trong những trường đại học kỹ thuật hàng đầu Hàn Quốc với khẩu hiệu "Asia's Best University for the 21st Century".</p>
+                </div>
+                <div class="card">
+                    <h3>💡 Tinh thần</h3>
+                    <p>“Tưởng tượng, Đổi mới và Tiên phong”. Chúng tôi luôn khuyến khích sinh viên sáng tạo không ngừng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="section" style="background-color: #fff;">
+        <div class="container">
+            <h2 class="section-title">Hoạt Động Của VSA</h2>
+            <div class="grid-3">
+                <div class="card" style="background: white; border: 1px solid #ddd;">
+                    <h3>📚 Hỗ trợ học tập</h3>
+                    <p>Chia sẻ tài liệu, tổ chức các buổi study group, hướng dẫn đăng ký môn học và xin học bổng.</p>
+                </div>
+                <div class="card" style="background: white; border: 1px solid #ddd;">
+                    <h3>sport Thể thao & Văn hóa</h3>
+                    <p>Giải bóng đá thường niên, ngày hội văn hóa Việt Nam, các chuyến đi dã ngoại (MT) gắn kết thành viên.</p>
+                </div>
+                <div class="card" style="background: white; border: 1px solid #ddd;">
+                    <h3>🤝 Đời sống</h3>
+                    <p>Hỗ trợ tân sinh viên tìm nhà, làm thẻ người nước ngoài và hòa nhập cuộc sống tại Hàn Quốc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Liên hệ: vsa.ajou@example.com | Fanpage: VSA Ajou University</p>
+        <p>&copy; 2024 Chi hội Sinh viên Việt Nam tại ĐH Ajou. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
